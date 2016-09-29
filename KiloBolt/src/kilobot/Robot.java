@@ -1,6 +1,6 @@
 package kilobot;
 
-import java.awt.Graphics;
+import java.util.ArrayList;
 
 public class Robot {
 
@@ -15,6 +15,8 @@ public class Robot {
   private boolean movingLeft = false;
   private boolean movingRight = false;
   private boolean ducked = false;
+  
+  private ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 
   private static Background bg1 = StartingClass.getBg1();                 
   private static Background bg2 = StartingClass.getBg2();
@@ -107,9 +109,15 @@ public class Robot {
           speedY = JUMPSPEED;
           jumped = true;
       }
-
   }
-
+  public void shoot() {
+    Projectile p = new Projectile(centerX + 50, centerY - 25);
+    projectiles.add(p);
+  }
+  
+  public ArrayList getProjectiles() {
+    return projectiles;
+  }
   public int getCenterX() {
       return centerX;
   }
