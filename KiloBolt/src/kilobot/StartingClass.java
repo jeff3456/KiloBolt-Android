@@ -16,6 +16,8 @@ public class StartingClass extends Applet implements Runnable, KeyListener{
   private Image image, currentSprite, character, character2, character3, characterDown,
   characterJumped, background, heliboy, heliboy2, heliboy3, heliboy4, heliboy5;
   public static Image tiledirt, tileocean;
+  public static Image tilegrassTop, tilegrassBot, tilegrassLeft, tilegrassRight;
+
 
   private URL base;
   private Graphics second;
@@ -59,6 +61,10 @@ public class StartingClass extends Applet implements Runnable, KeyListener{
 
     background = getImage(base, "data/background.png");
     tiledirt = getImage(base, "data/tiledirt.png");
+    tilegrassTop = getImage(base, "data/tilegrasstop.png");
+    tilegrassBot = getImage(base, "data/tilegrassbot.png");
+    tilegrassLeft = getImage(base, "data/tilegrassleft.png");
+    tilegrassRight = getImage(base, "data/tilegrassright.png");
     tileocean = getImage(base, "data/tileocean.png");
 
 
